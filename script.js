@@ -13,7 +13,7 @@ let play = document.getElementById("yes-but")
 
 function playSong () {
 
-    let audio = Audio("air.mp3")
+    let audio = new Audio("air.mp3")
         audio.play()
 }
 
