@@ -10,11 +10,24 @@ const finalText = document.getElementById("final-text");
 
 
 let play = document.getElementById("yes-but")
+let mute = document.getElementById("mute");
+let audio = new Audio("air.mp3")
+audio.volume = 0.2
+
+mute.addEventListener("click", () => {
+    audio.muted = !audio.muted; // toggle mute
+    mute.textContent = audio.muted ? "Unmute" : "Mute";
+});
 
 function playSong () {
-
-    let audio = new Audio("air.mp3")
-        audio.play()
+    if (audio.paused) {
+        audio.play();
+        play.textContent = "Pause"; // optional: change button text
+    } else {
+        audio.pause();
+        play.textContent = "Play"; // optional
+    }
+       
 }
 
 play.addEventListener("click", playSong);
