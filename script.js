@@ -10,7 +10,6 @@ const finalText = document.getElementById("final-text");
 
 
 let play = document.getElementById("yes-but")
-let mute = document.getElementById("mute");
 let audio = new Audio("air.mp3")
 audio.volume = 0.2
 
