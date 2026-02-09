@@ -14,10 +14,6 @@ let mute = document.getElementById("mute");
 let audio = new Audio("air.mp3")
 audio.volume = 0.2
 
-mute.addEventListener("click", () => {
-    audio.muted = !audio.muted; // toggle mute
-    mute.textContent = audio.muted ? "Unmute" : "Mute";
-});
 
 function playSong () {
     if (audio.paused) {
